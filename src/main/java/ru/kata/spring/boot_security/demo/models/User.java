@@ -23,13 +23,13 @@ public class User implements UserDetails {
     @NotEmpty(message = "Имя не может быть пустым")
     @Size(min = 2, max = 20, message = "Имя должно быть в диапазоне от 2 до 20 символов")
     @Column(name = "first_name", length = 20, nullable = false, columnDefinition = "text")
-    @Pattern(regexp = "\\p{L}+", message = "Имя должно состоять только из букв")
+    //@Pattern(regexp = "\\p{L}+", message = "Имя должно состоять только из букв")
     private String firstName;
 
     @NotEmpty(message = "Фамилия не может быть пустой")
     @Size(min = 2, max = 30, message = "Фамилия должна быть в диапазоне от 2 до 30 символов")
     @Column(name = "last_name", length = 30, nullable = false, columnDefinition = "text")
-    @Pattern(regexp = "\\p{L}+", message = "Фамилия должна состоять только из букв")
+    //@Pattern(regexp = "\\p{L}+", message = "Фамилия должна состоять только из букв")
     private String lastName;
 
     @NotEmpty(message = "Поле не может быть пустым")
